@@ -1,0 +1,10 @@
+<!-- <div *ngFor="let pokemon of pokemones">
+  <app-card [pokemon]="pokemon"></app-card>
+</div> -->
+
+<h1>Agrega Pokemones a tu pokedex</h1>
+<mat-grid-list cols="4">
+  <mat-grid-tile *ngFor="let pokemon of personajes">
+    <app-card [pokemon]="pokemon"></app-card
+  ></mat-grid-tile>
+</mat-grid-list>

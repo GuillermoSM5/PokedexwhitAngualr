@@ -1,0 +1,11 @@
+<mat-card class="card">
+  <mat-card-title>{{ pokemon.name | titlecase }}</mat-card-title>
+  <mat-card-subtitle>id: {{ pokemon.id }}</mat-card-subtitle>
+  <img mat-card-img [src]="pokemon.sprites.front_default" alt="" />
+  <mat-card-actions>
+    <button *ngIf="add" (click)="atrapar(pokemon)" mat-button>Atrapar</button>
+    <button *ngIf="!add" (click)="liberar(pokemon)" mat-button>Liberar</button>
+  </mat-card-actions>
+</mat-card>
+
+<!-- <p>{{ pokemon.weight }}</p> -->

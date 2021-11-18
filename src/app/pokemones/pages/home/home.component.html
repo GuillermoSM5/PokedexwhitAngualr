@@ -1,0 +1,16 @@
+<app-input-search
+  (onEnter)="buscar($event)"
+  placeholder="Buscar pokemones"
+></app-input-search>
+
+<div *ngIf="error; else divError">
+  <p>No existe ningun pokemon con ese nombre</p>
+</div>
+
+<ng-template #divError>
+  <div *ngFor="let pokemon of pokemones">
+    <app-card [pokemon]="pokemon" [add]="add"></app-card>
+  </div>
+</ng-template>
+
+<!-- <p *ngFor="let pokemon of pokemones">{{ pokemon.weight }}</p> -->
